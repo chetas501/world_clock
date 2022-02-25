@@ -24,8 +24,7 @@ class WorldTime {
       DateTime now = DateTime.parse(datetime);
       now = now.add(Duration(hours: int.parse(offset)));
       isDayTime = now.hour > 6 && now.hour < 20 ? true : false;
-      time = DateFormat.jm().format(now);
-      //now.toString();
+      time = DateFormat.jm().format(now); // intl plugin      
     } catch (e) {
       print('Caught error: $e');
       time = 'could not get time and date';
